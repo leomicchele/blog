@@ -1,0 +1,15 @@
+{
+  "name": "blogpersonal",
+  "version": "1.0.0",
+  "description": "Blog Personal",
+  "main": "./src/js/app.js",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build"
+  },
+  "author": "Leandro Micchele <leomicchele@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "snowpack": "^3.5.2"
+  }
+}

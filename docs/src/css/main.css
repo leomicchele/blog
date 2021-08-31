@@ -1,0 +1,692 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth; 
+}
+
+:root {
+    --ColorPrimario: #36bed9;
+    --ColorSecundario: #eeeeee;
+    --ColorTerciario: #393e46;
+    --ColorCuaternario: #222831;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+}
+
+.header_container-sup {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--ColorPrimario);
+}
+.header_container-sup div {
+    width: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 30px;
+}
+.header_container-sup div a {
+    height: 35px;
+}
+.header_container-sup_icon {
+    width: 35px;
+}
+
+/* Contenedor MAIN */
+main {
+    width: 100%;
+    background: linear-gradient(188deg, rgba(34,40,49,1) 55%, rgba(57,62,70,1) 55%);
+    /* min-height: 100vh;
+    height: 100%; */
+    padding-bottom: 60px;
+}
+
+/* Barra de navegacion "Logo" y "Sobre mi" */
+.nav_logotipo {
+    width: 100%;
+    height: 90px;
+    padding: 30px 50px 0px 50px;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: var(--ColorTerciario); */
+    background-color: transparent;
+}
+.nav_logo-container {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav_logo-container a {
+    text-decoration: none;
+    color: var(--ColorSecundario);
+    font-size: 3.0rem;
+    font-weight: 600;
+    letter-spacing: .3rem;
+    
+}
+.nav_logo-container a p {
+    font-weight: 600;
+    
+}
+.nav_logo-container a p span::before{
+    content: "<";
+    color: var(--ColorPrimario);
+}
+.nav_logo-container a p span::after{
+    content: "/>";
+    color: var(--ColorPrimario);
+}
+
+
+.nav_about a{
+    text-decoration: none;
+    color: var(--ColorSecundario);
+    font-size: 2.0rem;
+    border: 1px solid var(--ColorSecundario);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Seccion de Nombre completo e imagen */
+.main_container-info {
+    width: 95%;
+    max-width: 1400px;
+    max-height: 100vh;
+    margin: 0 auto;
+    margin-top: 0px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.main_container-info a {
+    text-decoration: none;
+}
+.main_container-info_nombre {
+    width: 50%;
+    color: var(--ColorSecundario);
+    margin-top: 50px;
+}
+
+.main_container-info_titulos {
+    margin-bottom: 50px;
+}
+.main_container-info_nombre h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+.main_container-info_nombre h3 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 0.4rem;
+}
+.main_container-info_icons {
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.contacto-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contacto-icon:hover {
+    transition: ease-in 0.3s 0s;
+}
+.contacto-icon a {
+    display: flex;
+    align-items: center;
+}
+.contacto-icon img {
+    width: 40px;
+    transition: all 0.4s 0s ease;
+}
+.contacto-icon img:hover {
+    transform: scale(1.2);
+    
+}
+
+.main_container-info_curriculum a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-size: 1.9rem;    
+    color: var(--ColorSecundario);
+    font-weight: 600;    
+    padding: 13px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.main_container-info_curriculum div {
+    width: 250px;
+    height: 50px;
+    margin: 0 auto;    
+    /* background-color: #f1ba00; */
+    background-color: #ecab43;
+    border-radius: 25px;
+    transition: 0.5s ease all;
+}
+.main_container-info_curriculum div:hover {
+    background-color: #0099f1;
+}
+.main_container-info_curriculum a img{
+    margin-right: 10px;
+}
+
+.main_container-info_imagen {
+    width: 30%;
+    height: 30%;
+}
+.main_container-info_imagen img {
+    width: 400px;
+}
+
+.nav-categoria {
+    display: none;
+}
+
+/* Seccion PORTFOLIO HABILIDADES EDUCACION */
+.container-categoria{
+    max-width: 1300px;
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+    margin-top: 70px;
+}
+.container-categoria_article{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    background-color: rgb(19, 34, 53);  
+    cursor: pointer;
+    transition: all 0.4s 0s ease;
+}
+.container-categoria_article:hover {
+    transition: all 0.4s 0s ease;
+    background-color: rgb(44, 62, 85);  
+    box-shadow: 4px 4px 6px 2px rgba(0,0,0,0.54);
+}
+.categoria_article_img {    
+    height: 250px;
+    width: 250px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 0 auto ;
+}
+.portfolio{
+    background-image: url(/src/assets/img/proyectos.png);   
+}
+.educacion{
+    background-image: url(/src/assets/img/educacion.png);   
+}
+.habilidades{
+    background-image: url(/src/assets/img/habilidades.png);   
+}
+.container-categoria_article h4{
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--ColorSecundario);
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+}
+
+/* <----- ----- ----- SECCION PORTFOLIO ----- ----- -----> */
+
+.sections {
+    background: rgb(34,40,49);
+    padding-bottom: 40px;    
+    padding-top: 90px;
+    position: relative;
+    
+    
+}
+.portfolio-section {
+    background: linear-gradient(352deg, rgba(34,40,49,1) 54%, rgba(57,62,70,1) 56%);
+}
+
+.portfolio_container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto; 
+}
+.linea-divisoria {
+    background-color: #fff;
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    top: 30px;
+    left: 25%;
+    margin: 0 auto;
+}
+
+.titulo-seccion {
+    font-size: 3.0rem;
+    color: var(--ColorSecundario);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.subtitulo-seccion {
+    max-width: 1100px;
+    margin: 0 auto;
+    font-size: 2.0rem;
+    color: var(--ColorSecundario);
+    text-align: center;
+    letter-spacing: 0.1rem;
+    line-height: 3rem;
+}
+
+.portfolio_container-articles {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+.portfolio_container-articles article{
+    max-width: 420px; 
+    /* width: 30%;  */
+    margin: 20px 10px 0px;
+    min-width: 300px;
+    
+}
+
+.portfolio_container-articles article h3 {
+    font-size: 2.0rem;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+    text-align: center;
+    color: #ecab43;
+    text-decoration: underline;
+    text-underline-position:under;
+    margin-bottom: 15px;
+}
+
+.portfolio_container-articles article img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+.container-info_texto {
+    margin-bottom: 23px;
+    margin-top: 15px;
+}
+
+.portfolio_container-articles article p {
+    color: var(--ColorSecundario);
+    text-align: center;
+    font-size: 1.6rem;
+    letter-spacing: .1rem;
+    /* padding-top: 15px; */
+    margin-bottom: 10px;
+}
+.container-info_texto-link {
+    display: flex;
+}
+
+.link-repositorio {
+    text-align: center;
+    text-decoration: none;
+    color: var(--ColorPrimario);
+    font-size: 1.8rem;
+    margin: 0 auto;
+}
+.link-repositorio:hover {
+    text-decoration: underline;
+}
+
+
+/* <----- ----- ----- SECCION HABILIDADES ----- ----- -----> */
+.skill-section {
+    background: linear-gradient(188deg, rgba(34,40,49,1) 54%, rgba(57,62,70,1) 56%);
+}
+
+.skills_container-icons {
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.skill_container-icons-img {    
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    /* flex-wrap: wrap; */
+}
+
+.skill_container-icons_group {
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.container-icon {
+    width: 95px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px 30px;
+
+}
+
+.iconos {
+    width: 64px;
+    height: 64px;
+}
+
+.container-icon p {
+    color: var(--ColorSecundario);
+    font-size: 1.6rem;
+    margin-top: 10px;
+    letter-spacing: .1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* <----- ----- ----- SECCION EDUCACION ----- ----- -----> */
+
+.education-section {
+    background: linear-gradient(352deg, rgba(34,40,49,1) 54%, rgba(57,62,70,1) 56%);
+}
+
+.educacion_container-link-platzi {
+    text-align: center;
+    margin-top: 40px;
+}
+.educacion_container-link-platzi a {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--ColorSecundario);
+    transition: 0.3s ease all;
+}
+.educacion_container-link-platzi a:hover {
+    color: var(--ColorPrimario);
+    text-decoration: none;
+}
+
+.education-section article {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.education-section article div {
+    display: flex;
+    flex-direction: column;
+}
+
+.education-section article a{
+    font-size: 1.6rem;
+    color: var(--ColorSecundario);
+    line-height: 3rem;
+    text-align: center;
+}
+
+/* <----- ----- ----- SECCION SOBRE MI ----- ----- -----> */
+
+.about-section {
+    background: rgba(34,40,49,1);
+    padding-bottom: 90px;
+      
+}
+
+.about-section article{
+    margin-top: 40px;
+}
+
+.about-container_img-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-container_img-description img {
+    width: 256px;
+    margin: 0 10px;
+    
+}
+.about-container_img-description_profesional {    
+    width: 50%;
+    margin-left: 30px;
+}
+.about-container_img-description p {
+    margin: 0 10px;
+    font-size: 2.0rem;
+    color: var(--ColorSecundario);
+    /* text-align: center; */
+    letter-spacing: 0.1rem;
+    line-height: 3rem;
+}
+.about-container_img-description_hobbies {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.about-section h3 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-bottom: 15px;
+    color: var(--ColorPrimario);
+}
+.hobbies {
+    text-align: left;
+}
+
+
+/* <----- ----- ----- FOOTER ----- ----- -----> */
+footer {
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--ColorTerciario);
+    border-top: 1px solid var(--ColorSecundario);
+}
+
+.container-footer-icons {
+    margin-bottom: 0px;
+}
+
+/* <----- ----- ----- MEDIA QUERIES ----- ----- -----> */
+
+@media(max-width: 1160px) {
+    .skill_container-icons-img {
+        flex-direction: column;
+    }
+    .skill_container-icons_group {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .main_container-info_nombre h1 {
+        font-size: 3.0rem;
+    }
+}
+
+@media(max-width: 1023px) {
+    .main_container-info_imagen {
+        display: none;
+    }
+    .main_container-info_nombre {
+        width: 100%;
+    }
+    .container-categoria_article {
+        width: 280px;
+        height: 280px;
+    }
+    .categoria_article_img {
+        width: 220px;
+        height: 220px;
+    }  
+    
+    .linea-divisoria {
+        width: 80%;
+        left: 10%;
+    }
+}
+
+
+
+
+@media(max-width: 767px) {
+    
+    .about-container_img-description {
+        flex-direction: column;
+    }
+    .about-container_img-description_profesional {
+        margin: 10px 0 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .about-container_img-description_hobbies  {
+        text-align: center;
+    }
+    .subtitulo-seccion {
+        text-align: center;
+    }
+    
+
+    /* NAV CATEGORIA */
+    .container-categoria {
+        display: none;
+    }
+    
+    .nav-categoria {
+        width: 100%;
+        position: sticky;
+        z-index: 999;
+        top: -1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+        background-color: rgb(19 34 53);
+        box-shadow: 1px 8px 6px -4px rgba(0,0,0,0.49);
+    }
+    .nav-categoria a{
+        font-size: 2.0rem;
+        padding: 20px 30px;
+        text-decoration: none;
+        color: var(--ColorSecundario);
+        transition: ease all 0.3s;
+    }
+    .nav-categoria a:hover {
+        background-color: rgb(44 62 85);
+    }
+}
+
+@media(max-width: 600px) {
+    .sections {
+        padding-bottom: 0;
+    }
+    .about-section {
+        padding-bottom: 50px;
+    }
+    .main_container-info_nombre h1 {
+        font-size: 2.8rem;
+    }
+    .main_container-info_nombre h3 {
+        font-size: 2.0rem;
+    }
+    .titulo-seccion {
+        font-size: 2.6rem;
+    }
+
+}
+
+@media(max-width: 510px) {
+
+    .nav_logotipo {
+        padding: 30px 20px 0px;
+    }
+
+    .main_container-info_nombre h1 {
+        font-size: 2.5rem;
+    }
+    .main_container-info_nombre h3 {
+        font-size: 1.8rem;
+    }
+    .titulo-seccion {
+        font-size: 2.3rem;
+    }
+
+    .subtitulo-seccion {
+        font-size: 1.8rem;
+    }
+    .nav-categoria a {
+        padding: 20px 15px;
+        font-size: 1.8rem;
+    }
+    .skill_container-icons_group {
+        flex-wrap: wrap;
+    }
+    .about-container_img-description_profesional p {
+        font-size: 1.8rem;
+    }
+
+}
+
+@media(max-width: 400px) {
+
+    .nav_logotipo {
+        padding: 30px 15px 0px;
+    }
+    .nav_logo-container {
+        width: 100px;
+        justify-content: center;
+    }
+
+    .subtitulo-seccion {
+        font-size: 1.6rem;
+    }
+    .nav-categoria a {
+        padding: 20px 10px;
+        font-size: 1.6rem;
+    }
+    .about-container_img-description_profesional p {
+        font-size: 1.6rem;
+    }
+    .skill_container-icons_group {
+        /* flex-wrap: nowrap; */
+    }
+    .about-container_img-description img {
+        width: 200px;
+    }
+
+    .container-icon {
+        width: 73px;
+    }
+}
