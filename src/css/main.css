@@ -367,6 +367,14 @@ main {
 .link-repositorio:hover {
     text-decoration: underline;
 }
+.portafolio-aclaracion {
+    font-size: 1.6rem;
+    color: #ecab43;
+    font-style: italic;
+    margin: 0 auto;
+    text-align: center;
+    width: 95%;
+}
 
 
 /* <----- ----- ----- SECCION HABILIDADES ----- ----- -----> */
@@ -536,7 +544,7 @@ footer {
     }
 }
 
-@media(max-width: 1023px) {
+@media(max-width: 1024px) {
     .main_container-info_imagen {
         display: none;
     }
@@ -558,11 +566,17 @@ footer {
     }
 }
 
-
-
-
-@media(max-width: 767px) {
+@media(max-width: 900px) {
+    .container-categoria_article {
+        width: 230px;
+        height: 230px;
+    }
+    .categoria_article_img {
+        width: 170px;
+        height: 170px;
+    }  
     
+
     .about-container_img-description {
         flex-direction: column;
     }
@@ -578,8 +592,12 @@ footer {
     .subtitulo-seccion {
         text-align: center;
     }
-    
+}
 
+
+
+
+@media(max-width: 768px) {
     /* NAV CATEGORIA */
     .container-categoria {
         display: none;
